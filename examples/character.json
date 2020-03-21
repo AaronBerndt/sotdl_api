@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Joe",
+    "level": 1,
+    "description": "Grimdark guy",
+    "ancestry": "Human",
+    "path": {
+      "novice": "Warrior",
+      "expert": "",
+      "master": ""
+    },
+    "languages": [{ "name": "Common" }],
+    "professions": [
+      {
+        "name": "Guard",
+        "type": "Martial"
+      }
+    ],
+    "talents": [],
+    "stats": {
+      "size": 1,
+      "speed": 10,
+      "strength": 12,
+      "intellect": 10,
+      "agility": 10,
+      "will": 10,
+      "health": 12,
+      "power": 0,
+      "healing_rate": 0.25,
+      "corruption": 0,
+      "instanity": 0,
+      "perception": 10,
+      "defense": 14
+    },
+    "gear": {
+      "weapons": [],
+      "equipment": []
+    }
+  }
+]

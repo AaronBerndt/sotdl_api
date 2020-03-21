@@ -1,46 +1,46 @@
 [
   {
-    "Name": "Flense",
-    "Tradition": "Air",
-    "Type": "Attack",
-    "Level": 1,
-    "Characteristics": {
-      "Target": "One creature or object within short range",
-      "Duration": 0
+    "name": "Flense",
+    "tradition": "Air",
+    "type": "Attack",
+    "level": 1,
+    "characteristics": {
+      "target": "One creature or object within short range",
+      "duration": 0
     },
-    "Description": "Windborne grit scours your target. Make a Will attack roll against the target’s Strength. On a success, the target takes 2d6 + 3 damage. A living creature that becomes incapacitated by this damage dies instantly, its flesh (if any) stripped from its bones.",
-    "Extra Effects": [
+    "description": "Windborne grit scours your target. Make a Will attack roll against the target’s Strength. On a success, the target takes 2d6 + 3 damage. A living creature that becomes incapacitated by this damage dies instantly, its flesh (if any) stripped from its bones.",
+    "extra effects": [
       {
-        "Name": "Attack Roll 20+",
-        "Description": "The target takes 2d6 extra damage."
+        "name": "Attack Roll 20+",
+        "description": "The target takes 2d6 extra damage."
       }
     ]
   },
   {
-    "Name": "Magic Dart",
-    "Tradition": "Arcana",
-    "Type": "Attack",
-    "Level": 0,
-    "Characteristics": {
-      "Target": "One creature or object within long range",
-      "Duration": 0
+    "name": "Magic Dart",
+    "tradition": "Arcana",
+    "type": "Attack",
+    "level": 0,
+    "characteristics": {
+      "target": "One creature or object within long range",
+      "duration": 0
     },
-    "Description": "A magical dart flies from your fingertip. The dart automatically hits, provided there is an unobstructed path between you and the target. The target takes 1d3 + 1 damage."
+    "description": "A magical dart flies from your fingertip. The dart automatically hits, provided there is an unobstructed path between you and the target. The target takes 1d3 + 1 damage."
   },
   {
-    "Name": "Arcane Shield",
-    "Tradition": "Arcana",
-    "Type": "Utility",
-    "Level": 0,
+    "name": "Arcane Shield",
+    "tradition": "Arcana",
+    "type": "Utility",
+    "level": 0,
     "Characteristics": {
-      "Target": "Self",
-      "Duration": "1 Min"
+      "target": "Self",
+      "duration": "1 Min"
     },
-    "Description": "For the duration, a barrier of energy shields you, imposing 1 bane on attack rolls against your Defense or Agility.",
-    "Extra Effects": [
+    "description": "For the duration, a barrier of energy shields you, imposing 1 bane on attack rolls against your Defense or Agility.",
+    "extra effects": [
       {
-        "Name": "Triggered",
-        "Description": "When a creature makes an attack roll against your Defense or Agility, you can use a triggered action to cast this spell. The triggering creature makes the attack roll with 3 banes, and then the effect ends."
+        "name": "Triggered",
+        "description": "When a creature makes an attack roll against your Defense or Agility, you can use a triggered action to cast this spell. The triggering creature makes the attack roll with 3 banes, and then the effect ends."
       }
     ]
   }
