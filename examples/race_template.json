@@ -1,0 +1,93 @@
+[
+  {
+    "name": "Human",
+    "description": "Determination, resourcefulness, and sheer numbers helped humanity rise from its humble, primitive origins to become the most widespread and numerous people in the world.  Few places have escaped human expansion, and settlements exist in mountains and swamps, desolate wastes and verdant plains. Human civilization has defined the last thousand years of history and continues even as the shadow falls.",
+    "starting_attributes": {
+      "strength": 10,
+      "agility": 10,
+      "intellect": 10,
+      "will": 10
+    },
+    "perception": 0,
+    "defense": 0,
+    "health": 0,
+    "healing_rate": 0.25,
+    "size": 1,
+    "speed": 10,
+    "power": 0,
+    "damage": 0,
+    "insanity": 0,
+    "corruption": 0,
+    "languages": "Common",
+    "professions": "Common",
+    "features": [
+      {
+        "name": "Determined",
+        "description": "When you roll a 1 on the die from a boon, you can reroll the die and choose to use the new number."
+      }
+    ],
+    "characteristics": [
+      {
+        "name": "Health",
+        "value": 5,
+        "level": 4
+      }
+    ]
+  },
+  {
+    "name": "Changeling",
+    "description": "Faerie create changelings to conceal the absence of children they steal. They construct a changeling from natural materials and use magic to give it the appearance of the missing child. The magic often fades after a few weeks, but sometimes it lingers and lets the changeling grow up to become a real person.",
+    "starting_attributes": {
+      "strength": 9,
+      "agility": 10,
+      "intellect": 10,
+      "will": 10
+    },
+    "perception": 1,
+    "defense": 0,
+    "health": 0,
+    "healing_rate": 0.25,
+    "size": 1,
+    "speed": 10,
+    "power": 0,
+    "damage": 0,
+    "insanity": 0,
+    "corruption": 0,
+    "languages": "Common",
+    "professions": "Common",
+    "features": [
+      {
+        "name": "Immune",
+        "description": "damage from disease; charmed, diseased",
+        "level": 1
+      },
+      {
+        "name": "Iron Vulnerability",
+        "description": "You are impaired while in contact with iron.",
+        "level": 1
+      },
+      {
+        "name": "Shadowsight",
+        "description": "You see into areas obscured by shadows as if those areas were lit.",
+        "level": 1
+      },
+      {
+        "name": "Steal Identity",
+        "description": "You can use an action to alter your appearance to match that of a target living creature you can see within short range. The target must be Size 1 or 1/2 and have a humanoid shape of flesh and blood. Your body changes so you look like the target, though your clothing and possessions remain unchanged. The effect lasts until you use this talent again. If you become incapacitated or touch an object made from iron, you immediately revert to your normal appearance.",
+        "level": 1
+      },
+      {
+        "name": "Doppelganger’s Advantage",
+        "description": "You can use a triggered action on your turn to use Steal Identity. As well, when you steal a creature’s identity, your attack rolls against that creature are made with 1 boon while you have that creature’s appearance.",
+        "level": 4
+      }
+    ],
+    "characteristics": [
+      {
+        "name": "Health",
+        "value": 4,
+        "level": 4
+      }
+    ]
+  }
+]

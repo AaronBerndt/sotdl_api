@@ -1,0 +1,23 @@
+[
+  {
+    "name": "",
+    "type": "",
+    "description": "",
+    "attributes": "+1 to two",
+    "professions": "",
+    "features": [
+      {
+        "name": "",
+        "description": "",
+        "level": 1
+      }
+    ],
+    "characteristics": [
+      {
+        "name": "Health",
+        "value": 5,
+        "level": 1
+      }
+    ]
+  }
+]
