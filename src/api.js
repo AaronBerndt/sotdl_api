@@ -11,7 +11,7 @@ export const GetAncestries = async ({ query }, res) => {
 
 export const GetPaths = async ({ query }, res) => {
   try {
-    const data = await RunMongoCommand(query, "paths");
+    const data = await RunMongoCommand(query, "paths", "select");
     return res.status(200).json(data);
   } catch (error) {
     return res.status(500).json(error);
@@ -20,7 +20,7 @@ export const GetPaths = async ({ query }, res) => {
 
 export const GetSpells = async ({ query }, res) => {
   try {
-    const data = await RunMongoCommand(query, "spells");
+    const data = await RunMongoCommand(query, "spells", "select");
     return res.status(200).json(data);
   } catch (error) {
     return res.status(500).json(error);
@@ -29,7 +29,19 @@ export const GetSpells = async ({ query }, res) => {
 
 export const GetCharacters = async ({ query }, res) => {
   try {
-    const data = await RunMongoCommand(query, "characters");
+    const data = await RunMongoCommand(query, "characters", "select");
+    return res.status(200).json(data);
+  } catch (error) {
+    return res.status(500).json(error);
+  }
+};
+
+export const InsertInto = async (
+  { query: { collectionName, documentObject: query } },
+  res
+) => {
+  try {
+    const data = await RunMongoCommand(query, collectionName, "insert");
     return res.status(200).json(data);
   } catch (error) {
     return res.status(500).json(error);

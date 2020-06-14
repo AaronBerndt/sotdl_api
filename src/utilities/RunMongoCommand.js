@@ -1,11 +1,16 @@
 import { MongoClient } from "mongodb";
 
-const createClient = async url => {
+const createClient = async () => {
   try {
     console.log("Attempting to create client");
-    const client = await MongoClient.connect(url, {
-      useNewUrlParser: true
+    const user = "user";
+    const uri = `mongodb+srv://${user}:${user}@cluster0-yolat.gcp.mongodb.net/test?retryWrites=true&w=majority`;
+
+    const client = await MongoClient.connect(uri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
     });
+
     console.log("Sucessfully created client");
     return client;
   } catch (error) {
@@ -13,10 +18,10 @@ const createClient = async url => {
   }
 };
 
-const createDBO = async (connection, database) => {
+const createDBO = async (connection) => {
   try {
     console.log("Attempting to create DBO");
-    const dbo = await connection.db(database);
+    const dbo = await connection.db("sotdl");
     console.log("Sucessfully created DBO");
     return dbo;
   } catch (error) {
@@ -24,13 +29,13 @@ const createDBO = async (connection, database) => {
   }
 };
 
-const runMongoQuery = async (dbo, query, collection) => {
+const runMongoQuery = async (dbo, query, collection, queryType) => {
   try {
-    console.log("Attempting to run query on Mongo");
-    const data = await dbo
-      .collection(collection)
-      .find(query)
-      .toArray();
+    console.log(query);
+    const data =
+      queryType === "select"
+        ? await dbo.collection(collection).find(query).toArray()
+        : await dbo.collection(collection).insertOne(JSON.parse(query));
     console.log("Sucessfully ran query");
     return data;
   } catch (error) {
@@ -38,12 +43,21 @@ const runMongoQuery = async (dbo, query, collection) => {
   }
 };
 
-const RunMongoCommand = async (database, query, collection) => {
+const closeClient = async (client) => {
   try {
-    const url = "mongodb://localhost:27017";
-    const client = await createClient(url);
-    const dbo = await createDBO(client, database);
-    const data = await runMongoQuery(dbo, query, collection);
+    console.log("Attempting to close client");
+    await client.close();
+    console.log("Sucessfully closed client");
+  } catch (error) {
+    console.log(error);
+  }
+};
+const RunMongoCommand = async (query, collection, queryType) => {
+  try {
+    const client = await createClient();
+    const dbo = await createDBO(client);
+    const data = await runMongoQuery(dbo, query, collection, queryType);
+    await closeClient(client);
     return data;
   } catch (error) {
     console.log(error);
