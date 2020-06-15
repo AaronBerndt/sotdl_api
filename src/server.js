@@ -1,5 +1,7 @@
 import express from "express";
 import cors from "cors";
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 
 import {
   GetAncestries,
@@ -11,7 +13,7 @@ import {
 import ParseText from "./parse_api";
 const app = express();
 app.use(cors());
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => res.status(200).json({ message: "Hello World!" }));
 app.get("/ancestries", GetAncestries);
