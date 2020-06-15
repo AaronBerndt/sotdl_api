@@ -3,9 +3,8 @@ import { MongoClient } from "mongodb";
 const createClient = async () => {
   try {
     console.log("Attempting to create client");
-    const user = "user";
-    const uri = `mongodb+srv://${user}:${user}@cluster0-yolat.gcp.mongodb.net/test?retryWrites=true&w=majority`;
-
+    const uri = process.env.MONGO_URI;
+    console.log(uri);
     const client = await MongoClient.connect(uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
