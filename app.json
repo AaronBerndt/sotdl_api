@@ -1,0 +1,5 @@
+{
+  "name": "sotl-api",
+  "description": "API to connect to Mongo Atlas to pull data",
+  "image": "heroku/nodejs"
+}
