@@ -10,7 +10,7 @@ import {
   GetCharacters,
   InsertInto,
 } from "./api.js";
-import ParseText from "./parse_api";
+
 const app = express();
 app.use(cors());
 const PORT = process.env.PORT || 3000;
@@ -21,5 +21,4 @@ app.get("/paths", GetPaths);
 app.get("/spells", GetSpells);
 app.get("/characters", GetCharacters);
 app.post("/insertInto", InsertInto);
-app.get("/parse_text", ParseText);
 app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`));
