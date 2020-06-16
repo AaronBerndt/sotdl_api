@@ -41,6 +41,7 @@ export const InsertInto = async (
   res
 ) => {
   try {
+    console.log(collectionName, documentObject);
     const data = await RunMongoCommand(query, collectionName, "insert");
     return res.status(200).json(data);
   } catch (error) {
