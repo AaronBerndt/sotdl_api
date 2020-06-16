@@ -53,6 +53,7 @@ const closeClient = async (client) => {
 };
 const RunMongoCommand = async (query, collection, queryType) => {
   try {
+    console.log(query, collection, queryType);
     const client = await createClient();
     const dbo = await createDBO(client);
     const data = await runMongoQuery(dbo, query, collection, queryType);
